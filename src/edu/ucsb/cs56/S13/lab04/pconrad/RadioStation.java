@@ -17,7 +17,7 @@ package edu.ucsb.cs56.S13.lab04.pconrad;
 public class RadioStation {
 
     private String callSign = "KCSB"; 
-    private double freq = 99.9; 
+    private double freq = 91.9; 
 
     /** Default Constructor creates a Radio Station KCSB, 99.9 */
 
@@ -28,24 +28,21 @@ public class RadioStation {
 	@param freq frequency  (e.g. 91.9, 99.9, 93.7, 990.0.  kHz for AM, mHz for FM)
      */
     public RadioStation(String callSign, double freq) { 
-	// @@@ STUB!
-	// this.callSign = callSign;
-	// this.freq = freq;
+	this.callSign = callSign;
+	this.freq = freq;
     }
 
     /**
        @return call sign  (e.g. KCSB, KTYD, KDB, KTMS)       
     */
     public String getCallSign() { 
-	return "STUB!"; // @@@ STUB
-	// return callSign; 
+	return callSign; 
     }
     /**
        @return frequency (e.g. 91.9, 99.9, 93.7, 990.0)
      */
     public double getFrequency() { 
-	return -42.42; // @@@ STUB
-	// return freq; 
+	return freq; 
     } 
     
     /**
@@ -53,8 +50,7 @@ isFM() that returns a true or false value. It should return true when frequency 
        @return true if this is an FM station (false implies AM)
      */
     public boolean isFM() {
-	return false; // @@@ STUB
-	// return this.freq <= 108.0;
+	return this.freq <= 108.0;
     }
 
     /**
@@ -62,12 +58,11 @@ isFM() that returns a true or false value. It should return true when frequency 
        @return String represntation of station.
      */
     public String toString() {
-	return "STUB!";
-
-	/* return "[" + this.callSign + ", " 
-	    + (this.isFM() ? "FM " : "AM ")
-	        + this.freq
-		+ "]"; */
+	java.text.DecimalFormat amFormat = new java.text.DecimalFormat("0");
+	java.text.DecimalFormat fmFormat = new java.text.DecimalFormat("0.0");
+	return "[" + this.callSign + ", " 
+	    + (this.isFM() ? "FM " + fmFormat.format(this.freq) :  "AM " + amFormat.format(this.freq))
+	    + "]"; 
     }
 
     /** 
@@ -85,12 +80,12 @@ isFM() that returns a true or false value. It should return true when frequency 
        @return true if this object is the same radio station as o
      */
     public boolean  equals(Object o) { 
-	return false; // @@@ STUB
-	/*	double tol = 0.01; 
+
+	double tol = 0.01; 
 	if (! (o instanceof RadioStation) )
 	    return false;
 	RadioStation other = (RadioStation) o;
 	return (other.getCallSign().equals(this.getCallSign()) &
-	Math.abs(other.getFrequency() - this.getFrequency()) < tol ); */
+	Math.abs(other.getFrequency() - this.getFrequency()) < tol ); 
     }
 }
