@@ -12,7 +12,7 @@ public class RoommateTest {
     */
     @Test
     public void test_getName() {
-	Roommate Martin = new Roommate("stub", 42);
+	Roommate Martin = new Roommate("Martin B", 10000);
 	assertEquals("Martin B", Martin.getName());
 
     }
@@ -24,7 +24,7 @@ public class RoommateTest {
     */
     @Test
     public void test_getLevelOfAnnoyance(){
-	Roommate Martin = new Roommate("stub", 42);
+	Roommate Martin = new Roommate("Martin B", 10000);
 	assertEquals(10000,Martin.getLevelOfAnnoyance());
     }
 
@@ -35,7 +35,7 @@ public class RoommateTest {
     */
     public void test_setName(){
 	Roommate Martin = new Roommate();
-	Martin.setName("stub");
+	Martin.setName("Martin B");
 	assertEquals("Martin B", Martin.getName());
     }
 
@@ -47,7 +47,7 @@ public class RoommateTest {
     */
     public void test_setLevelOfAnnoyance(){
 	Roommate Martin = new Roommate();
-	Martin.setLevelOfAnnoyance(42);
+	Martin.setLevelOfAnnoyance(10000);
 	assertEquals(10000,Martin.getLevelOfAnnoyance());
     }
     /**
@@ -56,7 +56,7 @@ public class RoommateTest {
     */
     @Test
     public void test_ToString() {
-	Roommate Martin = new Roommate("stub", 42);
+	Roommate Martin = new Roommate("Martin B", 10000);
 	String expected = "My roommate is Martin B and my current level of annoyance with him is 10000";
 	assertEquals(expected, Martin.toString());
     }
@@ -69,14 +69,14 @@ public class RoommateTest {
     */
     @Test
     public void test_Equals() {
-	Roommate Martin = new Roommate("stub", 10000);
-	Roommate Martin2= new Roommate("stub2", 10000);
+	Roommate Martin = new Roommate("Martin B", 10000);
+	Roommate Martin2= new Roommate("Martin B", 10000);
 	assertEquals(true, Martin.equals(Martin2));
     }
     public void test_Equals_NotEqual() {
 
 	Roommate Martin = new Roommate();
-	Roommate Martin2 = new Roommate();
+	Roommate Martin2 = new Roommate("Martin B", 10000);
 	assertEquals(false, Martin.equals(Martin2));
     }
 
@@ -88,7 +88,7 @@ public class RoommateTest {
     */
     @Test
     public void test_Smack() {
-	Roommate Martin = new Roommate("stub", 42);
+	Roommate Martin = new Roommate("Martin B", 10000);
 	Martin.smack();
 	assertEquals(0, Martin.getLevelOfAnnoyance());
     }
