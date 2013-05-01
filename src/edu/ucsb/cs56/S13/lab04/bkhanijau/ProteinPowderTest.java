@@ -19,8 +19,8 @@ public class ProteinPowderTest {
 	public void test_DefaultConstructor_and_getters() {
 	
 	ProteinPowder iso = new ProteinPowder();
-	assertEquals("STUB",iso.getBrand());
-	assertEquals(-42,iso.getGramsProtein());
+	assertEquals("Isopure",iso.getBrand());
+	assertEquals(25,iso.getGramsProtein());
 	
     }
     
@@ -71,6 +71,18 @@ public class ProteinPowderTest {
 	ProteinPowder iso = new ProteinPowder();
 	ProteinPowder gold = new ProteinPowder("Gold Standard", 24);
 	assertFalse(iso.equals(gold));
+    }
+
+    @Test
+    public void test_isPossible_yes(){
+    	ProteinPowder p = new ProteinPowder("Standard", 24);
+    	assertTrue(p.isPossibleProtein());
+    }
+
+    @Test
+    public void test_isPossible_no(){
+    	ProteinPowder p = new ProteinPowder("Standard", -42);
+    	assertFalse(p.isPossibleProtein());
     }
 
 

@@ -11,16 +11,14 @@ of each brand is represented in an int.
 
 public class ProteinPowder {
 
-    private String brand; 
-    private int gramsProtein; 
+    private String brand = "Isopure"; 
+    private int gramsProtein = 25; 
 
     /** 
     Default Constructor creates a protein powder object of value Default,0 
     */
 
     public ProteinPowder() {
-        brand = "STUB";
-        gramsProtein = -42; //STUB
     } 
 
     /** 
@@ -28,28 +26,28 @@ public class ProteinPowder {
 	@param gramsProtein
      */
     public ProteinPowder(String brand, int grams) { 
-        brand = "STUB";
-        gramsProtein = -42; //STUB
+        this.brand = brand;
+        this.gramsProtein = grams;
     }
 
     /**
        @return brand      
     */
     public String getBrand() { 
-	return "STUB"; 
+	return this.brand; 
     }
     /**
        @return grams of protein per serving
      */
     public int getGramsProtein() { 
-	return -42; //STUB
+	return this.gramsProtein;
     } 
     
     /**
 checks if it is a possible object. Must have no less than 0 grams of protein per serving
      */
     public boolean isPossibleProtein() {
-        return false; //STUB
+        return (this.getGramsProtein()>=0);
     }
 
      /**
@@ -58,7 +56,10 @@ checks if it is a possible object. Must have no less than 0 grams of protein per
        @return true if this object is the same powder as o
      */
     public boolean  equals(Object o) { 
-    return false; //STUB
+    if (! (o instanceof ProteinPowder) )
+        return false;
+    ProteinPowder test = (ProteinPowder) o;
+    return ( this.getBrand().equals(test.getBrand()) && ( this.getGramsProtein() == test.getGramsProtein()) ); 
     }
 
     /**
@@ -66,7 +67,7 @@ checks if it is a possible object. Must have no less than 0 grams of protein per
        @return String represntation of protein powder.
      */
     public String toString() {
-	return "STUB";
+	return this.getBrand() + ", " + this.getGramsProtein();
     }
 
     /** 
@@ -74,7 +75,7 @@ checks if it is a possible object. Must have no less than 0 grams of protein per
      */
     public static void main(String [] args) { 
 	ProteinPowder goldStandard = new ProteinPowder("Gold Standard",24);
-	ProteinPowder none = new ProteinPowder();
+	ProteinPowder iso = new ProteinPowder();
 	System.out.println(goldStandard);
     }
 
