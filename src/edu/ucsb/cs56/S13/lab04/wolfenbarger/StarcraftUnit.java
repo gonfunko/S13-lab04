@@ -72,4 +72,13 @@ public class StarcraftUnit
         return "stub";
     }
     
+    /**
+     Check if the units are equal
+     @param o another object
+     @return true if this object is equal to o
+     */
+    public boolean equals(Object o) {
+        return false;
+    }
+    
 }
