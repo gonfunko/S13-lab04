@@ -33,15 +33,15 @@ public class DogTest {
 	Dog r = new Dog("Marry","small",3);
 	assertEquals("Marry",r.getDogName());
 	assertEquals("small",r.getDogSize());
-	assertEquals(5,r.getDogAge());	
+	assertEquals(3,r.getDogAge());	
     }
 
    
     @Test
-	public void test_toString_KCSB() {
+	public void test_toString_Dog() {
 	
 	Dog r = new Dog();
-	assertEquals("Freedy is a small dog, he's age is 5",r.toString());
+	assertEquals("Freddy is a small dog, he's age is 5",r.toString());
     }
 
   
