@@ -24,7 +24,7 @@ public class PowerUsageTest{
     @Test
     public void test_TwoArgConstructor_and_getters_Toaster(){
 	
-	PowerUsage p = new powerUsage("Toaster",800);
+	PowerUsage p = new PowerUsage("Toaster",800);
 	assertEquals("Toaster",p.getApplianceName());
 	assertEquals(800,p.getWatts());
     }
@@ -32,7 +32,7 @@ public class PowerUsageTest{
     @Test
     public void test_toString_Toaster(){
 	
-	PowerUsage p = new powerUsage("Toaster",800);
+	PowerUsage p = new PowerUsage("Toaster",800);
 	assertEquals("Toaster",p.getApplianceName());
 	assertEquals("Appliance Name and Wattage: Toaster 800",p.toString());
     }
@@ -58,7 +58,7 @@ public class PowerUsageTest{
 
         PowerUsage p1 = new PowerUsage();
         PowerUsage p2 = new PowerUsage("Toaster",800);
-        assertFalse(r1.equals(r2));
+        assertFalse(p1.equals(p2));
     }
 
 
