@@ -14,7 +14,7 @@ public class StarcraftUnit
      */
     
     public StarcraftUnit() {
-        this.name = "stub";
+        this.name = "Unit";
     }
     
     /**
@@ -23,8 +23,8 @@ public class StarcraftUnit
      * @param attackDamage damage per attack
      */
     public StarcraftUnit(String name, int attackDamage) {
-        this.name = "stub";
-        this.attackDamage = 0;
+        this.name = name;
+        this.attackDamage = attackDamage;
     }
     
     /**
@@ -32,7 +32,7 @@ public class StarcraftUnit
      * @param  name the new name
      */
     public void setName(String name) {
-        this.name = "stub";
+        this.name = name;
     }
       
   
@@ -41,7 +41,7 @@ public class StarcraftUnit
      * @param  attackDamage the new attackDamage
      */
     public void setAttackDamage(int attackDamage) {
-        this.attackDamage = 0;
+        this.attackDamage = attackDamage;
     }
 
     
@@ -50,7 +50,7 @@ public class StarcraftUnit
      * @return name
      */
     public String getName() {
-        return "stub";
+        return this.name;
     }
     
     
@@ -60,16 +60,16 @@ public class StarcraftUnit
      */
     
     public int getAttackDamage() {
-        return 0;
+        return this.attackDamage;
     }
 
     
     /** format StarcraftUnit number as String, in an expression like:
-     *  Ultralisk 35
-     *  @return formatted starcraft unit (e.g. Ultralisk 35)
+     *  [Ultralisk, 35]
+     *  @return formatted starcraft unit (e.g. [Ultralisk, 35])
      */
     public String toString() {
-        return "stub";
+        return "[" + this.name + ", " + this.attackDamage + "]";
     }
     
     /**
@@ -78,7 +78,18 @@ public class StarcraftUnit
      @return true if this object is equal to o
      */
     public boolean equals(Object o) {
-        return false;
+        if(!(o instanceof StarcraftUnit)) return false;
+        StarcraftUnit other = (StarcraftUnit) o;
+        return (this.name.equals(other.getName()) && this.attackDamage == other.getAttackDamage());
     }
     
+    /**
+     A sample main that uses the class.
+     */
+    public static void main(String [] args) {
+        StarcraftUnit ultra = new StarcraftUnit("Ultralisk",35);
+        StarcraftUnit hydra = new StarcraftUnit();
+        System.out.println(ultra);
+    }
+                
 }
