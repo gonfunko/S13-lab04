@@ -6,12 +6,13 @@ PowerUsage contains the name of a household appliance and
 the number of watts required to operate the appliance. This
 class was created for lab04 in the Spring 2013 course for CS56.
 
+@see <a href="http://www.cs.ucsb.edu/~cbarbello/cs56/lab04/javadoc"></a>
 */
 
 public class PowerUsage{
     
-    private String applianceName = "stub"; //"Refrigerator";
-    private int watts = -42; //725;
+    private String applianceName = "Refrigerator";
+    private int watts = 725;
 
     /** Default Constructor creates Refrigerator, 725 */
 
@@ -23,22 +24,36 @@ public class PowerUsage{
     */
 
     public PowerUsage(String applianceName, int watts){
-	this.applianceName = "stub"; // applianceName;
-	this.watts = -42; //watts;
+	this.applianceName = applianceName;
+	this.watts = watts;
     }
 
     /**
        @return appliance name (e.g. Refrigerator, Toaster, Fan)
     */
     public String getApplianceName(){
-	return "stub"; //applianceName;
+	return applianceName;
     }
 
     /**
        @return watts (e.g. 725, 800, 55)
     */
     public int getWatts(){
-	return -42; //watts;
+	return watts;
+    }
+
+    /**                                                                        
+       @set appliance name (e.g. Refrigerator, Toaster, Fan)                 
+    */
+    public void setApplianceName(String applianceName){
+        this.applianceName=applianceName;
+    }
+
+    /**                                                                        
+       @set watts (e.g. 725, 800, 55)                                        
+    */
+    public void setWatts(int watts){
+        this.watts=watts;
     }
 
     /**
@@ -46,7 +61,7 @@ public class PowerUsage{
        @return String represntation of PowerUsage
     */
     public String toString(){
-	return "stub";//"Appliance Name and Wattage: " + this.applianceName + " " + this.watts;	   
+	return "Appliance Name and Wattage: " + this.applianceName + " " + this.watts;	   
     }
 
     /**
@@ -67,7 +82,7 @@ public class PowerUsage{
 	if(!(o instanceof PowerUsage))
 	    return false;
 	PowerUsage other = (PowerUsage) o;
-	return  (!other.getApplianceName().equals(this.getApplianceName())&
-		other.getWatts() != this.getWatts());
+	return  (other.getApplianceName().equals(this.getApplianceName())&
+		other.getWatts() == this.getWatts());
     }
 } // class PowerUsage
