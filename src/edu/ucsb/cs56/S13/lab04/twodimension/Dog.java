@@ -50,13 +50,13 @@ public class Dog{
  /** 
 	@set dogname
     */
-    public void setDogName(string dogName){
+    public void setDogName(String dogName){
 	this.dogName = stub/*dogName */;
     }
     /**
        @set dogsize
     */
-    public void setDogSize(string dogSize) { 
+    public void setDogSize(String dogSize) { 
 	this.dogSize = stub /*dogSize*/; 
     } 
     
@@ -98,7 +98,7 @@ public class Dog{
     */
     public static void main(String [] agrs){
 
-	Dog Freddy  =new Dog("Freddy","small".5);
+	Dog Freddy  =new Dog("Freddy","small",5);
 	System.out.println(Freddy);
     }
 
