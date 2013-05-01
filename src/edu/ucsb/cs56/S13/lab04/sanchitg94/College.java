@@ -28,15 +28,13 @@ public class College {
        @return name (e.g. UCSB, UCLA, SLO)      
     */
     public String getName() { 
-		return "stub";
-		//return name; 
+		return name; 
     }
     /**
        @return num  (e.g. 21000, 15000, 25000)
      */
     public int getNum() { 
-		return 0; //stub
-	//	return num; 
+		return num; 
     }
 
  	/**
@@ -66,8 +64,7 @@ public class College {
        @return String represntation of a college.
      */
     public String toString() {
-		return "stub";
-		//this.name + ", " + this.num + " Students";
+		return this.name + ", " + this.num + " Students";
     }
 
     /** 
