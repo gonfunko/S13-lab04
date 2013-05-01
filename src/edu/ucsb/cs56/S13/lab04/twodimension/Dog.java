@@ -30,20 +30,20 @@ public class Dog{
 	@return dogname
     */
     public String getDogName(){
-	return dogName;
+	return stub/*dogName*/;
     }
     /**
        @return dogsize
     */
     public double getDogSize() { 
-	return dogSize; 
+	return stub/*dogSize*/; 
     } 
     
     /**
        @return dog age
     */
     public double getDogAge() { 
-	return dogAge; 
+	return stub/*dogAge*/; 
     } 
     
 
@@ -51,20 +51,20 @@ public class Dog{
 	@set dogname
     */
     public void setDogName(string dogName){
-	this.dogName = dogName ;
+	this.dogName = stub/*dogName */;
     }
     /**
        @set dogsize
     */
     public void setDogSize(string dogSize) { 
-	this.dogSize = dogSize; 
+	this.dogSize = stub /*dogSize*/; 
     } 
     
     /**
        @set dog age
     */
     public void getDogAge(int dogAge) { 
-	this.dogAge = dogAge; 
+	this.dogAge = stub /*dogAge*/; 
     } 
     
 
@@ -77,7 +77,7 @@ public class Dog{
     */
 
     public String toString(){
-	return this.dogName + "is a "+this.dogSize+"dog, he's age is"+this.dogAge;
+	return stub/*this.dogName + "is a "+this.dogSize+"dog, he's age is"+this.dogAge*/;
     }
 
 
@@ -90,7 +90,7 @@ public class Dog{
 	if (! (o instanceof Dog) )
 	    return false;
 	Dog other = (Dog) o;
-	return (other.getDogName().equals(this.getDogName()) &other.getDogSize().equals(this.getDogSize())&other.getDogAge().equals(this.getDogAge())); 
+	return stub/*(other.getDogName().equals(this.getDogName()) &other.getDogSize().equals(this.getDogSize())&other.getDogAge().equals(this.getDogAge()))*/; 
     }														   
 
     /**
