@@ -20,74 +20,52 @@ public class DogTest {
 	public void test_DefaultConstructor_and_getters() {
 	
 	
-	RadioStation r = new RadioStation();
-	assertEquals("KCSB",r.getCallSign());
-	assertEquals(91.9,r.getFrequency(),tol);
-	
+	Dog r = new Dog();
+	assertEquals("Freddy",r.getDogName());
+	assertEquals("small",r.getDogSize());
+	assertEquals(5,r.getDogAge());	
     }
     
     @Test
-	public void test_TwoArgConstructor_and_getters_KJEE() {
+	public void test_TwoArgConstructor_and_getters_Dog() {
 	
 	
-	RadioStation r = new RadioStation("KJEE",92.9);
-	assertEquals("KJEE",r.getCallSign());
-	assertEquals(92.9,r.getFrequency(),tol);
-	
+	Dog r = new Dog("Marry","small",3);
+	assertEquals("Marry",r.getDogName());
+	assertEquals("small",r.getDogSize());
+	assertEquals(5,r.getDogAge());	
     }
 
-    @Test
-	public void test_TwoArgConstructor_KTYD() {
-		
-	RadioStation r = new RadioStation("KTYD",990);
-	assertEquals("KTYD",r.getCallSign());
-	assertEquals(990,r.getFrequency(),tol);
-	
-    }
-
+   
     @Test
 	public void test_toString_KCSB() {
 	
-	RadioStation r = new RadioStation();
-	assertEquals("[KCSB, FM 91.9]",r.toString());
+	Dog r = new Dog();
+	assertEquals("Freedy is a small dog, he's age is 5",r.toString());
     }
 
-    @Test
-	public void test_toString_KJEE() {
-		
-	RadioStation r = new RadioStation("KJEE",92.9);
-	assertEquals("[KJEE, FM 92.9]",r.toString());
-	
-    }
-
-    @Test
-	public void test_toString_KTYD() {
-		
-	RadioStation r = new RadioStation("KTYD",990);
-	assertEquals("[KTYD, AM 990]",r.toString());	
-    }
-
+  
     @Test
 	public void test_equals_equal1() {
 		
-	RadioStation r1 = new RadioStation("KTYD",990);
-	RadioStation r2 = new RadioStation("KTYD",990);
+	Dog r1 = new Dog("Freddy","small",5);
+	Dog r2 = new Dog("Freddy","small",5);
 	assertTrue(r1.equals(r2));
     }
 
     @Test
 	public void test_equals_equal2() {
 		
-	RadioStation r1 = new RadioStation();
-	RadioStation r2 = new RadioStation();
+	Dog r1 = new Dog();
+	Dog r2 = new Dog();
 	assertTrue(r1.equals(r2));
     }
 
     @Test
 	public void test_equals_notequal() {
 		
-	RadioStation r1 = new RadioStation();
-	RadioStation r2 = new RadioStation("KTYD",990);
+	Dog r1 = new Dog();
+	Dog r2 = new Dog("Eric","big",10);
 	assertFalse(r1.equals(r2));
     }
 
