@@ -8,7 +8,7 @@ import static org.junit.Assert.assertFalse;
 /** test class for ProteinPowder
 
 @author Bhanu Khanijau
-@version CS56, S13, lab04
+@version CS56, S13, lab04, 5/1/13
 @see ProteinPowder
 
 */
@@ -75,12 +75,14 @@ public class ProteinPowderTest {
 
     @Test
     public void test_isPossible_yes(){
+
     	ProteinPowder p = new ProteinPowder("Standard", 24);
     	assertTrue(p.isPossibleProtein());
     }
 
     @Test
     public void test_isPossible_no(){
+
     	ProteinPowder p = new ProteinPowder("Standard", -42);
     	assertFalse(p.isPossibleProtein());
     }

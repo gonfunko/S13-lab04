@@ -1,5 +1,7 @@
 package edu.ucsb.cs56.S13.lab04.bkhanijau;
 
+
+
 /**
 
 ProteinPowder class represents a brand of protein powder. 
@@ -9,6 +11,12 @@ represented in a String and the amount of grams per serving
 of each brand is represented in an int.
 */
 
+/** Class ProteinPowder
+
+@author Bhanu Khanijau
+@version CS56, S13, lab04, 5/1/13
+
+*/
 public class ProteinPowder {
 
     private String brand = "Isopure"; 
