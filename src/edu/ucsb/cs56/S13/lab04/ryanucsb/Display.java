@@ -10,13 +10,15 @@ public class Display {
        @param resolution the number of pixels of the display
      */
     public Display(String type, int resolution) {
-	// stub
+	this.type = type;
+	this.resolution = resolution;
     }
     /**
        The no-arg constructor. Default values are "LCD" and 2073600
      */
     public Display() {
-	// stub
+	this.type = "LCD";
+	this.resolution = 2073600;
     }
     
     /**
@@ -24,39 +26,37 @@ public class Display {
        @return display type
      */
     public String getType() {
-	return "stub";
+	return this.type;
     }
     /**
        Returns the display's resolution
        @return display resolution
      */
     public int getResolution() {
-	// stub
-	return -1;
+	return this.resolution;
     }
     /**
        Set the display's type
        @param display type to set
      */
     public void setType(String type) {
-	// stub
+	this.type = type;
     }
     /**
        Set the display's resolution
        @param resolution to set
      */
     public void setResolution(int resolution) {
-	// stub
+	this.resolution = resolution;
     }
 
     /**
        Get a string representation of the display (i.e. "LCD, 2073600 pixels"
     */
     public String toString() {
-	// stub
-	return "stub";
+	return (this.type + ", " + this.resolution + " pixels");
     }
-    public boolean equals() {
+    public boolean equals(Display other) {
 	// stub
 	return false;
     }
