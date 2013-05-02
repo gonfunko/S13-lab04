@@ -18,7 +18,7 @@ public class StreetAddressTest
 		assertEquals(0, s.getStreetNumber());
 	}
 
-	@Test public void testTwoArgConstroctor()
+	@Test public void testTwoArgConstructor()
 	{
 		StreetAddress s = new StreetAddress("Pardall", 192);
 		assertEquals("Pardall", s.getStreetName());
@@ -48,7 +48,7 @@ public class StreetAddressTest
 	@Test public void testGetStreetNumber()
 	{
 		StreetAddress s = new StreetAddress("Camino Del Sur", 785);
-		assertEquals("Camino Del Sur", s.getStreetNumber());
+		assertEquals(785, s.getStreetNumber());
 	}
 
 	@Test public void testToString()
