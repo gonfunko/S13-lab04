@@ -56,9 +56,12 @@ public class Display {
     public String toString() {
 	return (this.type + ", " + this.resolution + " pixels");
     }
-    public boolean equals(Display other) {
-	// stub
-	return false;
+    public boolean equals(Object other) {
+	if (!(other instanceof Display)) {
+	    return false;
+	}
+	Display d = (Display)other;
+	return (resolution == d.getResolution() && type.equals(d.type));
     }
 
     public static void main(String [] args) {
