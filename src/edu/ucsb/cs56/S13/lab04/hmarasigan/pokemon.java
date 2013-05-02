@@ -2,7 +2,7 @@
 /*
   pokemon represents a pokemon ( you can make this pokemon up or use a pokemon that has already been created.) The pokemon level can be as low as 1 and high as 100. 
  */
-public class pokemon(){
+public class pokemon{
     private String name; // pokemon name(pikachu, squirtle, charmander etc)
     private int level; // pokemon level (1-100)
     
@@ -33,7 +33,7 @@ public class pokemon(){
     /**
        get pokemon level
     */
-    public int getPokeomonLevel()
+    public int getPokemonLevel()
     {
 	return -42;//     @@@ stub
     }
@@ -43,7 +43,7 @@ public class pokemon(){
     */
     public void setPokemonName(String name)
     {
-	return "stub";
+	;
     }
     /**
      *set pokemon level
@@ -51,8 +51,36 @@ public class pokemon(){
     */
     public void setPokemonLevel(int level)
     {
+	;
+    }
+    /**
+     * makes the instance into a string
+     */
+    public String toString()
+    {
 	return "stub";
     }
-    
-	    
- 
+    /**
+     *checks if 2 pokemon objects are equal
+     */
+    public boolean equals(Object o)
+    {
+	if (!(o instanceof pokemon))
+	    return false;
+	pokemon pkmn = (pokemon) o;
+	if (pkmn.getPokemonName()==this.getPokemonName())
+	    return false;
+	if (pkmn.getPokemonLevel()==this.getPokemonLevel())
+	    return false;
+	return false;
+    }
+    /**
+       A sample main
+    */
+    public static void main(String [] args){
+	pokemon first = new pokemon("charmander",5);
+	pokemon second= new pokemon();
+	System.out.println(first);
+	System.out.println(second);
+    }
+}
