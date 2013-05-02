@@ -1,10 +1,10 @@
-
-/*
-  pokemon represents a pokemon ( you can make this pokemon up or use a pokemon that has already been created.) The pokemon level can be as low as 1 and high as 100. 
+package edu.ucsb.cs56.S13.lab04.hmarasigan;
+/**
+  pokemon represents a pokemon ( you can make this pokemon up or use a pokemon that has already been created.) The pokemon level can be any integer. 
  */
 public class pokemon{
     private String name; // pokemon name(pikachu, squirtle, charmander etc)
-    private int level; // pokemon level (1-100)
+    private int level; // pokemon level(any integer)
     
     /** Default Constructor 
      *  creates pikachu level 5
@@ -14,8 +14,8 @@ public class pokemon{
 	int level = 5;
     }
     /** constructor
-     @param name of pokemon(ie pikachu charmander etc.)
-     @param level of pokemon(1-100)
+     *@param name of pokemon(ie pikachu charmander etc.)
+     *@param level of pokemon(1-100)
     */
 
     public pokemon(String name, int level){
@@ -72,7 +72,7 @@ public class pokemon{
 	    return false;
 	if (pkmn.getPokemonLevel()==this.getPokemonLevel())
 	    return false;
-	return false;
+	return true;
     }
     /**
        A sample main
