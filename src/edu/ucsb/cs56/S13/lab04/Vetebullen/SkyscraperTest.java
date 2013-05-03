@@ -2,6 +2,12 @@ package edu.ucsb.cs56.S13.lab04.Vetebullen;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+/**
+Test class for Skyscraper
+@author Gunnar Weibull
+@version 1.0
+@see Skyscraper
+*/
 public class SkyscraperTest{
 	@Test public void testNoArgConstructor(){
 		Skyscraper s = new Skyscraper();
