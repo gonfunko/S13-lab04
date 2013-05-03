@@ -24,7 +24,7 @@ public class StreetAddressTest
 	@Test public void testNoArgConstructor()
 	{
 		StreetAddress s = new StreetAddress();
-		assertEquals(null, s.getStreetName());
+		assertEquals("No Where Lane", s.getStreetName());
 		assertEquals(0, s.getStreetNumber());
 	}
 

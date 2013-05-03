@@ -12,8 +12,8 @@ specific location on street an address is located.
 
 public class StreetAddress {
 
-	private String streetName;
-	private int streetNumber;
+	private String streetName = "No Where Lane";
+	private int streetNumber = 0;
 
 	/**
 	no-arg Constructor for objects of class StreetAddress
