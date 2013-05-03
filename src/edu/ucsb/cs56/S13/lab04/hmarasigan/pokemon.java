@@ -10,8 +10,9 @@ public class pokemon{
      *  creates pikachu level 5
      */
     public pokemon(){
-	String name="pikachu";
-	int level = 5;
+	
+	this.name= "pikachu";
+	this.level = 5;
     }
     /** constructor
      *@param name of pokemon(ie pikachu charmander etc.)
@@ -19,8 +20,8 @@ public class pokemon{
     */
 
     public pokemon(String name, int level){
-	this.name=name;
-	this.level=level;
+	this.name = name;
+	this.level = level;
     }
     
     /**
@@ -28,14 +29,14 @@ public class pokemon{
     */
     public String getPokemonName()
     {
-	return "stub";
+	return this.name;
     }
     /**
        get pokemon level
     */
     public int getPokemonLevel()
     {
-	return -42;//     @@@ stub
+	return this.level;
     }
     /**
      *set pokemon name
@@ -43,7 +44,7 @@ public class pokemon{
     */
     public void setPokemonName(String name)
     {
-	;
+	this.name=name;
     }
     /**
      *set pokemon level
@@ -51,14 +52,14 @@ public class pokemon{
     */
     public void setPokemonLevel(int level)
     {
-	;
+	this.level=level;
     }
     /**
      * makes the instance into a string
      */
     public String toString()
     {
-	return "stub";
+	return this.name +","+ this.level;
     }
     /**
      *checks if 2 pokemon objects are equal
@@ -68,10 +69,12 @@ public class pokemon{
 	if (!(o instanceof pokemon))
 	    return false;
 	pokemon pkmn = (pokemon) o;
-	if (pkmn.getPokemonName()==this.getPokemonName())
+	if (pkmn.getPokemonName()!=this.getPokemonName())
 	    return false;
-	if (pkmn.getPokemonLevel()==this.getPokemonLevel())
+
+	if (pkmn.getPokemonLevel()!=this.getPokemonLevel())
 	    return false;
+	
 	return true;
     }
     /**
