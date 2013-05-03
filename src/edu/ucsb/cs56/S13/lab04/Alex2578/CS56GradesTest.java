@@ -98,14 +98,4 @@ public class CS56GradesTest {
 	assertEquals(true ,h.equals(l));
     }
 
-
-
-
-
-
-
-
-    
-
-
 }
