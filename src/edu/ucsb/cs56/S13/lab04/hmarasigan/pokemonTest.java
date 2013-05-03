@@ -27,13 +27,13 @@ public class pokemonTest{
     }
     @Test
     public void test_toString_pikachu5(){
-	pokemon p=new pokemon();
-	assertEquals("[pikachu, 5]",p.toString());
+	pokemon p = new pokemon();
+	assertEquals("pikachu,5",p.toString());
     }
     @Test 
     public void test_toString_pidgey3(){
 	pokemon p = new pokemon("pidgey",3);
-	assertEquals("[pidgey,3]",p.toString());
+	assertEquals("pidgey,3",p.toString());
     }
     @Test
     public void test_equals_equal1(){
@@ -51,7 +51,7 @@ public class pokemonTest{
     @Test
     public void test_equals_notequal(){
 	pokemon p = new pokemon();
-	pokemon q = new pokemon("p",3);
+	pokemon q = new pokemon("q",3);
 	assertFalse(p.equals(q));
     }
 }
